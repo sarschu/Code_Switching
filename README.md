@@ -15,6 +15,6 @@ features: output and confidence of Middle-English tree tagger, Latin tree tagger
 context: window of 5 on all features
 
 
-##POS tagging
+## POS tagging
 
 Waiting for train data
