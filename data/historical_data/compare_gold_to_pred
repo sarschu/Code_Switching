@@ -1,0 +1,58 @@
+mode=''
+last_mode=''
+count=0
+count_incorrect=0
+c_n=0
+c_lang=0
+c_a=0
+c_p=0
+for i,line in enumerate(gold):
+    if line.strip()[-2:]=='_l':
+        mode='l'
+        last_mode='l'
+    elif line.strip()[-2:]=='_e':
+        mode='e'
+        last_mode=='e'
+    elif line.strip()[-2:]=='_a':
+        mode='a'
+    elif line.strip()[-2:]=='_n':
+        mode='n'
+    elif line.strip() in ['.',',',';','?','!',':']:
+        mode='p'
+    if mode == pred[i].strip()[-1]:
+        count+=1
+    else:
+        count_incorrect+=1
+        if mode=='n':
+            c_n+=1
+        if mode in ['e','l']:
+            c_lang+=1
+        if mode =='a':
+            c_a+=1
+        if mode =='p':
+            c_p+=1
+    if mode in ['a','n','p']:
+        mode=last_mode
+
+
+mode=''
+last_mode=''
+count=0
+for i,line in enumerate(gold):
+    if line.strip()[-2:]=='_l':
+        mode='l'
+        last_mode='l'
+    elif line.strip()[-2:]=='_e':
+        mode='e'
+        last_mode=='e'
+    elif line.strip()[-2:]=='_a':
+        mode='a'
+    elif line.strip()[-2:]=='_n':
+        mode='n'
+    elif line.strip() in ['.',',',';','?','!',':']:
+        mode='p'
+    if mode == 'l':
+        count+=1
+    if mode in ['a','n','p']:
+        mode=last_mode
+
