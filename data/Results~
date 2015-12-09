@@ -1,0 +1,16 @@
+Latin text:
+
+length: 3095 words
+
+correct language label: 2954 (95%)
+
+incorrect language label: 141 (5%)
+
+out of which:
+    30% should have been e or l
+    65% should have been n
+    5% should have been a
+
+
+baseline
+0.82

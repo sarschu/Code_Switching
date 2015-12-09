@@ -1,0 +1,16 @@
+We have Middle-English/Latin mixed text
+
+Aim: POS tagging
+
+Subgoal: Language detection of words (which is fed into the POS tagger which gonna use tagging as a feature)
+
+Categories to learn:
+
+_l Latin
+_e English
+_a is a word n both languages
+_n Named Entity
+
+Frist try:
+
+CRF using character n-grams
